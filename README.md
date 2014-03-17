@@ -10,7 +10,7 @@ Install it with:
 
 ## Usage
 
-    $ smart_bundler
+    $ sb
 
 ## Contributing
 
