@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kevin@clearsightstudio.com"]
   spec.summary       = %q{Installs Gems unable to be installed by bundler}
   spec.description   = %q{Installs Gems unable to be installed by bundler}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/clearsightstudio/smart_bundler"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
