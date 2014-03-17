@@ -4,7 +4,7 @@ Installs Gems unable to be installed by bundler
 
 ## Installation
 
-Or install it yourself as:
+Install it with:
 
     $ gem install smart_bundler
 
