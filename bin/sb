@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'commander/import'
+require "smart_bundler"
+
+program :version, SmartBundler::VERSION
+program :description, 'Installs gems that were unable to be installed by bundler'
+
+default_command :install
+ 
+command :install do |c|
+  c.syntax = 'smart_bundler install'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'Installs Gems unable to be installed by bundler'
+  c.action do |args, options|
+    SmartBundler::SB.new.run
+  end
+end
+
