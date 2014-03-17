@@ -1,16 +1,8 @@
 # SmartBundler
 
-TODO: Write a gem description
+Installs Gems unable to be installed by bundler
 
 ## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'smart_bundler'
-
-And then execute:
-
-    $ bundle
 
 Or install it yourself as:
 
@@ -18,7 +10,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ smart_bundler
 
 ## Contributing
 
