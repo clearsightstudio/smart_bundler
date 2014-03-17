@@ -1,5 +1,7 @@
 module SmartBundler
+
   class SB
+    include SmartBundler::SH
 
     def initialize
       @finished = false
@@ -7,23 +9,24 @@ module SmartBundler
 
     def run
       while @finished != true
-        output = call_bundle
-        failed_gem = parse_output(output)
+        result = call_bundle
+        failed_gem = parse_output(result)
         install_failed_gem(failed_gem)
       end
     end
 
     def call_bundle
-      sh "bundle"
+      shell "bundle"
     end
 
     def install_failed_gem(failed_gem)
-      sh "#{failed_gem}"
+      shell "#{failed_gem}"
     end
 
-    def parse_output(output)
-      if output.include?("Make sure that `")
-        output.split("Make sure that `")[1].split("`")[0]
+    def parse_output(result)
+      puts result.output
+      if result.output.include?("Make sure that `")
+        result.output.split("Make sure that `")[1].split("`")[0]
       else
         @finished = true
       end

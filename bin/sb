@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'commander/import'
-require "smart_bundler"
+require "smart_bundler.rb"
 
 program :version, SmartBundler::VERSION
 program :description, 'Installs gems that were unable to be installed by bundler'
