@@ -2,18 +2,5 @@
 
 require "smart_bundler.rb"
 
-program :version, SmartBundler::VERSION
-program :description, 'Installs gems that were unable to be installed by bundler'
-
-default_command :bundle
- 
-command :bundle do |c|
-  c.syntax = 'smart_bundler bundle'
-  c.summary = ''
-  c.description = ''
-  c.example 'description', 'Installs Gems unable to be installed by bundler'
-  c.action do |args, options|
-    SmartBundler::SB.new.run
-  end
-end
+SmartBundler::SB.new.run
 
